@@ -24,12 +24,23 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         Article::factory()->count(20)->create();
+
         Category::factory()->create([
             "name" => "News"
         ]);
         Category::factory()->create([
             "name" => "Tech"
         ]);
+        
         Comment::factory()->count(40)->create();
+
+        User::factory()->create([
+            "name" => "Alice",
+            "email" => "alice@gmail.com",
+        ]);
+        User::factory()->create([
+            "name" => "Bob",
+            "email" => "bob@gmail.com",
+        ]);
     }
 }
